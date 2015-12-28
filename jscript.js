@@ -11,7 +11,13 @@ function datum () {
 	$("#hours").html(hours);
 	$("#mins").html(mins); 
 	$("#secs").html(secs); 
-
+	$('.time')
+  .transition({ x: -Math.floor((Math.random() * 250) + 1) })
+  .transition({ y: Math.floor((Math.random() * 250) + 1) })
+  .transition({ x: 0 })
+  .transition({ y: 0 });
 };
+
+
 
 setInterval(datum, 500)
